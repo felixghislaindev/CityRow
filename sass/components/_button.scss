@@ -31,7 +31,25 @@
      &::after{
         background-color: $color-primary;
     }
- }&::after{
+    
+ } &--card{
+    background-color: $color-white;
+    color: $color-grey-dark;
+    &::after{
+       background-color: $color-white;
+   } }
+
+   &--card-two {
+    
+        background-color: $color-primary;
+        color: $color-white;
+        &::after{
+           background-color: $color-primary;
+       } }
+   
+   
+
+ &::after{
      content: "";
      display: inline-block;
      height: 100%;
