@@ -8,7 +8,23 @@
     
 }
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; //10px
+
+   
+   
+  
+    @include responsiveMode(tablet-land){
+        font-size: 56.25% //1rem = 9px, 9/16 =50%
+    }
+    @include responsiveMode(tablet-port){
+        font-size: 50% //1rem = 8px, 8/16 =50%
+    }
+    @include responsiveMode(phone){
+        font-size: 30% //1rem = 4.8px, 4.8/16 =50%
+    }
+    @include responsiveMode(desktop){
+        font-size: 50% //1rem = 12px, 12/16 =50%
+    }
 }
 
 body {

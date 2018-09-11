@@ -5,3 +5,32 @@
         clear: both;
     }
 }
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//  media querie  mixins
+
+@mixin respond-phone {
+    @media(max-width: 600px){ @content }
+} 
+@mixin responsiveMode($breakPoint) {
+    @if($breakPoint == phone){
+        @media(max-width: 37.5em){ @content } //600px
+    }
+    @if($breakPoint == tablet-port){
+        @media(max-width: 56.25em){ @content } //900px
+    }
+    @if($breakPoint == tablet-land){
+        @media(max-width: 75em){ @content } //1200px
+    }
+    @if($breakPoint == desktop){
+        @media(min-width: 112.5em){ @content } //1800px
+    } 
+}
+
+
+
